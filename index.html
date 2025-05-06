@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("July 6, 2025 16:30:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    }, 1000);
+</script>
+
 <head>
     <meta charset="utf-8">
     <title>Tamara & Rahsin</title>
@@ -40,7 +65,8 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
                 <a href="#home" class="font-tertiary nav-item nav-link active">Home</a>
-                <a href="#about" class="font-tertiary nav-item nav-link">About</a>
+                <a href="#about" class="font-tertiary nav-item nav-link">The Story</a>
+                <a href="#details" class="font-tertiary nav-item nav-link">Details</a>
                 <a href="#rsvp" class="font-tertiary nav-item nav-link">RSVP</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
@@ -96,6 +122,17 @@
         </div>
     </div>
     <!-- About End -->
+
+    <!-- Details Start -->
+    <div class="container-fluid" id="about">
+        <div class="container">
+            <div class="position-relative text-center">
+                <h1 id="countdown" class="font-secondary display-3">...</h1>
+                <h2 class="font-tertiary display-4">Until we get to share our day with you</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Details End -->
 
     <!-- RSVP Start -->
     <div class="container-fluid py-5" id="rsvp">
