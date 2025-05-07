@@ -9797,6 +9797,7 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 1;
   margin-right: -15px;
   margin-left: -15px;
+  margin-top: -50px;
   flex-grow: 1;
   max-width: 720px;
 }
