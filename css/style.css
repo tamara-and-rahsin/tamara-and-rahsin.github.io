@@ -9785,10 +9785,20 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 30px;
 }
 
+.rsvp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
 .rsvp-wrapper{
   z-index: 1;
   margin-right: -15px;
   margin-left: -15px;
+  flex-grow: 1;
+  max-width: 720px;
 }
 
 .rsvp-hidelogo{
